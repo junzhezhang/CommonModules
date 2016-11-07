@@ -298,8 +298,8 @@
 <span class="sd">    :param numpy.array NpArray: The Numpy array you want to store.</span>
 <span class="sd">    :param String Format: How to print each element, e.g. %i, %10.5f</span>
 <span class="sd">    &#39;&#39;&#39;</span>
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">AbsolutePath</span><span class="p">,</span> <span class="s">&quot;w+&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">File</span><span class="p">:</span>
-        <span class="n">np</span><span class="o">.</span><span class="n">savetxt</span><span class="p">(</span><span class="n">File</span><span class="p">,</span> <span class="n">NpArray</span><span class="p">,</span> <span class="n">fmt</span> <span class="o">=</span> <span class="n">Format</span><span class="p">)</span>
+
+    <span class="n">np</span><span class="o">.</span><span class="n">savetxt</span><span class="p">(</span><span class="n">AbsolutePath</span><span class="p">,</span> <span class="n">NpArray</span><span class="p">,</span> <span class="n">fmt</span> <span class="o">=</span> <span class="n">Format</span><span class="p">)</span>
 </div>
 <div class="viewcode-block" id="ImportNpArray"><a class="viewcode-back" href="../IO.html#IO.ImportNpArray">[docs]</a><span class="k">def</span> <span class="nf">ImportNpArray</span><span class="p">(</span><span class="n">AbsolutePath</span><span class="p">,</span> <span class="n">DataType</span><span class="p">,</span> <span class="n">ndmin</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;</span>
@@ -322,7 +322,7 @@
 <span class="sd">    :param String AbsolutePath: The stored file location.</span>
 <span class="sd">    :param scipy sparse matrix SparseMatrix: The scipy sparse matrix you want to store.</span>
 <span class="sd">    &#39;&#39;&#39;</span>
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">AbsolutePath</span><span class="p">,</span> <span class="s">&quot;w+&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">File</span><span class="p">:</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">AbsolutePath</span><span class="p">,</span> <span class="s">&quot;wb+&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">File</span><span class="p">:</span>
         <span class="n">scipy</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">mmwrite</span><span class="p">(</span><span class="n">File</span><span class="p">,</span> <span class="n">SparseMatrix</span><span class="p">)</span>
 </div>
 <div class="viewcode-block" id="ImportSparseMatrix"><a class="viewcode-back" href="../IO.html#IO.ImportSparseMatrix">[docs]</a><span class="k">def</span> <span class="nf">ImportSparseMatrix</span><span class="p">(</span><span class="n">AbsolutePath</span><span class="p">):</span>

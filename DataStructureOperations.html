@@ -45,8 +45,10 @@
 <p>Provided data structure related operations such as remove row from matrix.</p>
 <dl class="function">
 <dt id="DataStructureOperations.CombineSparseMatricesRowWise">
-<code class="descclassname">DataStructureOperations.</code><code class="descname">CombineSparseMatricesRowWise</code><span class="sig-paren">(</span><em>MainMatrix</em>, <em>AddedMatrix</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DataStructureOperations.html#CombineSparseMatricesRowWise"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#DataStructureOperations.CombineSparseMatricesRowWise" title="Permalink to this definition">¶</a></dt>
-<dd><p>Stack two scipy sparse matrices vertically (row wise). Will initialize the main matrix to be two dimensional csr_matrix with all zero elements if the main matrix is empty.</p>
+<code class="descclassname">DataStructureOperations.</code><code class="descname">CombineSparseMatricesRowWise</code><span class="sig-paren">(</span><em>MainMatrix</em>, <em>AddedMatrix</em>, <em>RemoveFirstZerosRow=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DataStructureOperations.html#CombineSparseMatricesRowWise"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#DataStructureOperations.CombineSparseMatricesRowWise" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stack two scipy sparse matrices vertically (row wise). Will initialize the main matrix to be two dimensional csr_matrix with all zero elements if the main matrix is empty.
+You can use .toarray() to convert final result to numpy array(not a sparse matrix)
+You must make sure MainMatrix and AddedMatrix have appropriate dimensions, i.e. have same number of columns.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -54,6 +56,7 @@
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>MainMatrix</strong> (<em>SparseMatrix</em>) &#8211; The main matrix that you want to add the AddedMatrix.</li>
 <li><strong>AddedMatrix</strong> (<em>SparseMatrix</em>) &#8211; The matrix added followed by the main matrix.</li>
+<li><strong>RemoveFirstZerosRow</strong> (<em>Boolean</em>) &#8211; When MainMatrix is empty, this method will automatically add a row with all zeros in the first row of MainMatirx. When this is True, Result will auto remove the first all zeros row when returns. Otherwise you need to manually do it.</li>
 </ul>
 </td>
 </tr>
