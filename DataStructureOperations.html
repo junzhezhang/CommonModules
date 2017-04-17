@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>DataStructureOperations module &mdash; CommonModules 0.1 documentation</title>
+    <title>DataStructureOperations module &#8212; CommonModules 0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -17,23 +17,27 @@
         VERSION:     '0.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="top" title="CommonModules 0.1 documentation" href="index.html" />
-    <link rel="up" title="Modules" href="modules.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="IO module" href="IO.html" />
     <link rel="prev" title="DataStructure module" href="DataStructure.html" />
    
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
   </head>
-  <body role="document">  
+  <body role="document">
+  
 
     <div class="document">
       <div class="documentwrapper">
@@ -43,6 +47,33 @@
   <div class="section" id="module-DataStructureOperations">
 <span id="datastructureoperations-module"></span><h1>DataStructureOperations module<a class="headerlink" href="#module-DataStructureOperations" title="Permalink to this headline">¶</a></h1>
 <p>Provided data structure related operations such as remove row from matrix.</p>
+<dl class="function">
+<dt id="DataStructureOperations.CombineMatricesRowWise">
+<code class="descclassname">DataStructureOperations.</code><code class="descname">CombineMatricesRowWise</code><span class="sig-paren">(</span><em>MainMatrix</em>, <em>AddedMatrix</em>, <em>RemoveFirstZerosRow=True</em>, <em>Sparse=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DataStructureOperations.html#CombineMatricesRowWise"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#DataStructureOperations.CombineMatricesRowWise" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stack twoe matrices vertically (row wise).
+You must make sure MainMatrix and AddedMatrix have appropriate dimensions, i.e. have same number of columns.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>MainMatrix</strong> (<em>SparseMatrix</em>) &#8211; The main matrix that you want to add the AddedMatrix.</li>
+<li><strong>AddedMatrix</strong> (<em>SparseMatrix</em>) &#8211; The matrix added followed by the main matrix.</li>
+<li><strong>RemoveFirstZerosRow</strong> (<em>Boolean</em>) &#8211; When MainMatrix is empty, this method will automatically add a row with all zeros in the first row of MainMatirx. When this is True, Result will auto remove the first all zeros row when returns. Otherwise you need to manually do it.</li>
+<li><strong>Sparse</strong> (<em>Boolean</em>) &#8211; If Sparse is True, the matrix will be automatically converted to sparse matrix and it&#8217;s less space consuming and slower.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Result: The result of Stacking matrices vertically (row wise).</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">NumpyArray/SparseMatrix</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 <dl class="function">
 <dt id="DataStructureOperations.CombineSparseMatricesRowWise">
 <code class="descclassname">DataStructureOperations.</code><code class="descname">CombineSparseMatricesRowWise</code><span class="sig-paren">(</span><em>MainMatrix</em>, <em>AddedMatrix</em>, <em>RemoveFirstZerosRow=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DataStructureOperations.html#CombineSparseMatricesRowWise"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#DataStructureOperations.CombineSparseMatricesRowWise" title="Permalink to this definition">¶</a></dt>
@@ -60,7 +91,7 @@ You must make sure MainMatrix and AddedMatrix have appropriate dimensions, i.e. 
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Result: The result of Stack sparse matrices vertically (row wise).</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Result: The result of Stacking sparse matrices vertically (row wise).</p>
 </td>
 </tr>
 <tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">SparseMatrix</p>
@@ -127,7 +158,7 @@ E.g. [[&#8216;foo&#8217;, &#8216;baz&#8217;], [&#8216;gg&#8217;]] or [[[&#8216;f
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>List[Variant]</strong> &#8211; The list you want to flatten</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>List</strong><strong>[</strong><strong>Variant</strong><strong>]</strong><strong></strong> &#8211; The list you want to flatten</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">List: Flattened list</td>
 </tr>
@@ -172,21 +203,18 @@ E.g. [[&#8216;foo&#8217;, &#8216;baz&#8217;], [&#8216;gg&#8217;]] or [[[&#8216;f
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/DataStructureOperations.txt"
+      <li><a href="_sources/DataStructureOperations.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script><ul>
 <h3>Links:</h3>
@@ -202,11 +230,11 @@ E.g. [[&#8216;foo&#8217;, &#8216;baz&#8217;], [&#8216;gg&#8217;]] or [[[&#8216;f
       &copy;2016, Wang Hewen.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.1</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.6</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
       
       |
-      <a href="_sources/DataStructureOperations.txt"
+      <a href="_sources/DataStructureOperations.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 

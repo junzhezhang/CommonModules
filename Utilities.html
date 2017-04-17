@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Utilities module &mdash; CommonModules 0.1 documentation</title>
+    <title>Utilities module &#8212; CommonModules 0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -17,22 +17,26 @@
         VERSION:     '0.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="top" title="CommonModules 0.1 documentation" href="index.html" />
-    <link rel="up" title="Modules" href="modules.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="Log module" href="Log.html" />
    
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
   </head>
-  <body role="document">  
+  <body role="document">
+  
 
     <div class="document">
       <div class="documentwrapper">
@@ -84,6 +88,30 @@
 </table>
 </dd></dl>
 
+<dl class="function">
+<dt id="Utilities.TimeElapsed">
+<code class="descclassname">Utilities.</code><code class="descname">TimeElapsed</code><span class="sig-paren">(</span><em>Unit=True</em>, <em>LastTime=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Utilities.html#TimeElapsed"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Utilities.TimeElapsed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the time interval since first/last call of this function.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>Unit</strong> (<em>Boolean/String</em>) &#8211; Whether to append unit &#8216; sec&#8217;(by default) or other unit when returned. If False, a float number will be returned.</li>
+<li><strong>LastTime</strong> (<em>Boolean</em>) &#8211; If True return the time interval since the last call of this function, otherwise return the time interval since the first call of this function, e.g. since programming running.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">TimeInterval: Time interval since last call of this function..</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">String/Float</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 </div>
 
 
@@ -95,21 +123,18 @@
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/Utilities.txt"
+      <li><a href="_sources/Utilities.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script><ul>
 <h3>Links:</h3>
@@ -125,11 +150,11 @@
       &copy;2016, Wang Hewen.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.1</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.6</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
       
       |
-      <a href="_sources/Utilities.txt"
+      <a href="_sources/Utilities.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 

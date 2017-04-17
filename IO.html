@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>IO module &mdash; CommonModules 0.1 documentation</title>
+    <title>IO module &#8212; CommonModules 0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -17,23 +17,27 @@
         VERSION:     '0.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="top" title="CommonModules 0.1 documentation" href="index.html" />
-    <link rel="up" title="Modules" href="modules.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Log module" href="Log.html" />
     <link rel="prev" title="DataStructureOperations module" href="DataStructureOperations.html" />
    
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
   </head>
-  <body role="document">  
+  <body role="document">
+  
 
     <div class="document">
       <div class="documentwrapper">
@@ -44,15 +48,53 @@
 <span id="io-module"></span><h1>IO module<a class="headerlink" href="#module-IO" title="Permalink to this headline">¶</a></h1>
 <p>File I/O related operations, such as list files, import/export or remove files/folder.</p>
 <dl class="function">
+<dt id="IO.CompressFiles">
+<code class="descclassname">IO.</code><code class="descname">CompressFiles</code><span class="sig-paren">(</span><em>Paths</em>, <em>CompressedFilePath</em>, <em>Format='zip'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/IO.html#CompressFiles"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IO.CompressFiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compress files into a (zip) file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>Paths</strong> (<em>List</em>) &#8211; Paths of the files you want to compress. These paths will be under the root of the compressed file.(You may want to use ListFiles to pass in all paths)</li>
+<li><strong>CompressedFilePath</strong> (<em>String</em>) &#8211; Path of the compressed file you want to store.</li>
+<li><strong>Format</strong> (<em>String</em>) &#8211; The format of the compressed file.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="IO.DecompressFiles">
+<code class="descclassname">IO.</code><code class="descname">DecompressFiles</code><span class="sig-paren">(</span><em>Paths</em>, <em>TargetFolder</em>, <em>Format='zip'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/IO.html#DecompressFiles"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IO.DecompressFiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decompress files from a (zip) file/files.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>Paths</strong> (<em>List</em>) &#8211; Paths of the files you want to decompress.</li>
+<li><strong>TargetFolder</strong> (<em>String</em>) &#8211; Path of the decompressed files you want to store.</li>
+<li><strong>Format</strong> (<em>String</em>) &#8211; The format of the compressed file.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
 <dt id="IO.ExportNpArray">
-<code class="descclassname">IO.</code><code class="descname">ExportNpArray</code><span class="sig-paren">(</span><em>AbsolutePath</em>, <em>NpArray</em>, <em>Format='%f'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/IO.html#ExportNpArray"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IO.ExportNpArray" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">IO.</code><code class="descname">ExportNpArray</code><span class="sig-paren">(</span><em>Path</em>, <em>NpArray</em>, <em>Format='%f'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/IO.html#ExportNpArray"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IO.ExportNpArray" title="Permalink to this definition">¶</a></dt>
 <dd><p>Export a Numpy array to a file.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>AbsolutePath</strong> (<em>String</em>) &#8211; The stored file location.</li>
+<li><strong>Path</strong> (<em>String</em>) &#8211; The stored file location.</li>
 <li><strong>NpArray</strong> (<em>numpy.array</em>) &#8211; The Numpy array you want to store.</li>
 <li><strong>Format</strong> (<em>String</em>) &#8211; How to print each element, e.g. %i, %10.5f</li>
 </ul>
@@ -64,7 +106,7 @@
 
 <dl class="function">
 <dt id="IO.ExportSparseMatrix">
-<code class="descclassname">IO.</code><code class="descname">ExportSparseMatrix</code><span class="sig-paren">(</span><em>AbsolutePath</em>, <em>SparseMatrix</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/IO.html#ExportSparseMatrix"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IO.ExportSparseMatrix" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">IO.</code><code class="descname">ExportSparseMatrix</code><span class="sig-paren">(</span><em>Path</em>, <em>SparseMatrix</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/IO.html#ExportSparseMatrix"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IO.ExportSparseMatrix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Export a scipy sparse matrix to a file using matrix market format.
 Please refer to <a class="reference external" href="http://math.nist.gov/MatrixMarket/formats.html">http://math.nist.gov/MatrixMarket/formats.html</a> for more information about this format.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -72,7 +114,7 @@ Please refer to <a class="reference external" href="http://math.nist.gov/MatrixM
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>AbsolutePath</strong> (<em>String</em>) &#8211; The stored file location.</li>
+<li><strong>Path</strong> (<em>String</em>) &#8211; The stored file location.</li>
 <li><strong>sparse matrix SparseMatrix</strong> (<em>scipy</em>) &#8211; The scipy sparse matrix you want to store.</li>
 </ul>
 </td>
@@ -83,14 +125,14 @@ Please refer to <a class="reference external" href="http://math.nist.gov/MatrixM
 
 <dl class="function">
 <dt id="IO.ExportToGML">
-<code class="descclassname">IO.</code><code class="descname">ExportToGML</code><span class="sig-paren">(</span><em>AbsolutePath</em>, <em>GraphContent</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/IO.html#ExportToGML"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IO.ExportToGML" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">IO.</code><code class="descname">ExportToGML</code><span class="sig-paren">(</span><em>Path</em>, <em>GraphContent</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/IO.html#ExportToGML"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IO.ExportToGML" title="Permalink to this definition">¶</a></dt>
 <dd><p>Export graph node link date to json file.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>AbsolutePath</strong> (<em>String</em>) &#8211; absolute path to store the json file</li>
+<li><strong>Path</strong> (<em>String</em>) &#8211; Path to store the json file</li>
 <li><strong>GraphContent</strong> (<em>nxGraph</em>) &#8211; some graph you want to export</li>
 </ul>
 </td>
@@ -101,7 +143,7 @@ Please refer to <a class="reference external" href="http://math.nist.gov/MatrixM
 
 <dl class="function">
 <dt id="IO.ExportToJson">
-<code class="descclassname">IO.</code><code class="descname">ExportToJson</code><span class="sig-paren">(</span><em>AbsolutePath</em>, <em>Content</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/IO.html#ExportToJson"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IO.ExportToJson" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">IO.</code><code class="descname">ExportToJson</code><span class="sig-paren">(</span><em>Path</em>, <em>Content</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/IO.html#ExportToJson"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IO.ExportToJson" title="Permalink to this definition">¶</a></dt>
 <dd><p>Export something to json file. 
 Will automatic convert Set content into List.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -109,7 +151,7 @@ Will automatic convert Set content into List.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>AbsolutePath</strong> (<em>String</em>) &#8211; absolute path to store the json file</li>
+<li><strong>Path</strong> (<em>String</em>) &#8211; Path to store the json file</li>
 <li><strong>Content</strong> (<em>Variant</em>) &#8211; something you want to export</li>
 </ul>
 </td>
@@ -120,14 +162,14 @@ Will automatic convert Set content into List.</p>
 
 <dl class="function">
 <dt id="IO.ExportToJsonNodeLinkData">
-<code class="descclassname">IO.</code><code class="descname">ExportToJsonNodeLinkData</code><span class="sig-paren">(</span><em>AbsolutePath</em>, <em>GraphContent</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/IO.html#ExportToJsonNodeLinkData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IO.ExportToJsonNodeLinkData" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">IO.</code><code class="descname">ExportToJsonNodeLinkData</code><span class="sig-paren">(</span><em>Path</em>, <em>GraphContent</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/IO.html#ExportToJsonNodeLinkData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IO.ExportToJsonNodeLinkData" title="Permalink to this definition">¶</a></dt>
 <dd><p>Export graph node link date to json file.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>AbsolutePath</strong> (<em>String</em>) &#8211; absolute path to store the json file</li>
+<li><strong>Path</strong> (<em>String</em>) &#8211; Path to store the json file</li>
 <li><strong>GraphContent</strong> (<em>nxGraph</em>) &#8211; some graph you want to export</li>
 </ul>
 </td>
@@ -138,7 +180,7 @@ Will automatic convert Set content into List.</p>
 
 <dl class="function">
 <dt id="IO.ExportToPkl">
-<code class="descclassname">IO.</code><code class="descname">ExportToPkl</code><span class="sig-paren">(</span><em>AbsolutePath</em>, <em>Content</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/IO.html#ExportToPkl"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IO.ExportToPkl" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">IO.</code><code class="descname">ExportToPkl</code><span class="sig-paren">(</span><em>Path</em>, <em>Content</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/IO.html#ExportToPkl"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IO.ExportToPkl" title="Permalink to this definition">¶</a></dt>
 <dd><p>Export something to pickle file. 
 Will automatic convert Set content into List.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -146,7 +188,7 @@ Will automatic convert Set content into List.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>AbsolutePath</strong> (<em>String</em>) &#8211; absolute path to store the json file</li>
+<li><strong>Path</strong> (<em>String</em>) &#8211; Path to store the json file</li>
 <li><strong>Content</strong> (<em>Variant</em>) &#8211; something you want to export</li>
 </ul>
 </td>
@@ -163,7 +205,7 @@ Will automatic convert Set content into List.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>FilePath</strong> (<em>String</em>) &#8211; absolute path of a file or directory</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>FilePath</strong> (<em>String</em>) &#8211; Path of a file or directory</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Boolean</td>
 </tr>
@@ -173,13 +215,13 @@ Will automatic convert Set content into List.</p>
 
 <dl class="function">
 <dt id="IO.ImportFromJson">
-<code class="descclassname">IO.</code><code class="descname">ImportFromJson</code><span class="sig-paren">(</span><em>AbsolutePath</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/IO.html#ImportFromJson"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IO.ImportFromJson" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">IO.</code><code class="descname">ImportFromJson</code><span class="sig-paren">(</span><em>Path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/IO.html#ImportFromJson"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IO.ImportFromJson" title="Permalink to this definition">¶</a></dt>
 <dd><p>Import something from json file.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>AbsolutePath</strong> (<em>String</em>) &#8211; absolute path of the json file</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>Path</strong> (<em>String</em>) &#8211; Path of the json file</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Content: Content in the json file</td>
 </tr>
@@ -191,13 +233,13 @@ Will automatic convert Set content into List.</p>
 
 <dl class="function">
 <dt id="IO.ImportFromJsonNodeLinkData">
-<code class="descclassname">IO.</code><code class="descname">ImportFromJsonNodeLinkData</code><span class="sig-paren">(</span><em>AbsolutePath</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/IO.html#ImportFromJsonNodeLinkData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IO.ImportFromJsonNodeLinkData" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">IO.</code><code class="descname">ImportFromJsonNodeLinkData</code><span class="sig-paren">(</span><em>Path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/IO.html#ImportFromJsonNodeLinkData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IO.ImportFromJsonNodeLinkData" title="Permalink to this definition">¶</a></dt>
 <dd><p>Import graph node link date from json file.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>AbsolutePath</strong> (<em>String</em>) &#8211; absolute path of the json file</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>Path</strong> (<em>String</em>) &#8211; Path of the json file</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">GraphContent: Graph content in the json file</td>
 </tr>
@@ -209,13 +251,13 @@ Will automatic convert Set content into List.</p>
 
 <dl class="function">
 <dt id="IO.ImportFromPkl">
-<code class="descclassname">IO.</code><code class="descname">ImportFromPkl</code><span class="sig-paren">(</span><em>AbsolutePath</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/IO.html#ImportFromPkl"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IO.ImportFromPkl" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">IO.</code><code class="descname">ImportFromPkl</code><span class="sig-paren">(</span><em>Path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/IO.html#ImportFromPkl"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IO.ImportFromPkl" title="Permalink to this definition">¶</a></dt>
 <dd><p>Import something from pickle file.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>AbsolutePath</strong> (<em>String</em>) &#8211; absolute path of the pickle file</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>Path</strong> (<em>String</em>) &#8211; Path of the pickle file</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Content: Content in the pickle file</td>
 </tr>
@@ -227,16 +269,16 @@ Will automatic convert Set content into List.</p>
 
 <dl class="function">
 <dt id="IO.ImportNpArray">
-<code class="descclassname">IO.</code><code class="descname">ImportNpArray</code><span class="sig-paren">(</span><em>AbsolutePath</em>, <em>DataType</em>, <em>ndmin=0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/IO.html#ImportNpArray"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IO.ImportNpArray" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">IO.</code><code class="descname">ImportNpArray</code><span class="sig-paren">(</span><em>Path</em>, <em>DataType</em>, <em>ndmin=0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/IO.html#ImportNpArray"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IO.ImportNpArray" title="Permalink to this definition">¶</a></dt>
 <dd><p>Import a Numpy array from a file.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>AbsolutePath</strong> (<em>String</em>) &#8211; The stored file location.</li>
+<li><strong>Path</strong> (<em>String</em>) &#8211; The stored file location.</li>
 <li><strong>DataType</strong> (<em>data-type</em>) &#8211; How to match each element, e.g. int, float</li>
-<li><strong>ndmin</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) &#8211; How many dimensions of array at least you will have.</li>
+<li><strong>ndmin</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) &#8211; How many dimensions of array at least you will have.</li>
 </ul>
 </td>
 </tr>
@@ -252,13 +294,13 @@ Will automatic convert Set content into List.</p>
 
 <dl class="function">
 <dt id="IO.ImportSparseMatrix">
-<code class="descclassname">IO.</code><code class="descname">ImportSparseMatrix</code><span class="sig-paren">(</span><em>AbsolutePath</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/IO.html#ImportSparseMatrix"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IO.ImportSparseMatrix" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">IO.</code><code class="descname">ImportSparseMatrix</code><span class="sig-paren">(</span><em>Path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/IO.html#ImportSparseMatrix"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IO.ImportSparseMatrix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Import a scipy sparse matrix from a file using matrix market format.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>AbsolutePath</strong> (<em>String</em>) &#8211; The stored file location.</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>Path</strong> (<em>String</em>) &#8211; The stored file location.</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">SparseMatrix: (converted) scipy csr_matrix in the file</td>
 </tr>
@@ -277,12 +319,12 @@ Will automatic convert Set content into List.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>Directory</strong> (<em>String</em>) &#8211; absolute path of a file directory</li>
-<li><strong>Extension</strong> (<em>String</em>) &#8211; Extension of the files you want. Better include &#8221;.&#8221; in the Extension</li>
+<li><strong>Directory</strong> (<em>String</em>) &#8211; Path of a file directory</li>
+<li><strong>Extension</strong> (<em>String</em>) &#8211; Extension of the files you want. Better include &#8221;.&#8221; in the Extension. Use &#8221;.&#8221; to list all files.</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">ListOfFiles: The list of absolute paths of the files you want under Directory</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">ListOfFiles: The list of Paths of the files you want under Directory</p>
 </td>
 </tr>
 <tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">List[String]</p>
@@ -300,9 +342,9 @@ Will automatic convert Set content into List.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>ApkDirectory</strong> (<em>String</em>) &#8211; absolute path of a apk file directory</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>ApkDirectory</strong> (<em>String</em>) &#8211; Path of a apk file directory</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">ListOfApkFiles: The list of absolute paths of Apks under ApkDirectory</td>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">ListOfApkFiles: The list of Paths of Apks under ApkDirectory</td>
 </tr>
 <tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">List[String]</td>
 </tr>
@@ -318,9 +360,9 @@ Will automatic convert Set content into List.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>Directory</strong> (<em>String</em>) &#8211; absolute path of a file directory</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>Directory</strong> (<em>String</em>) &#8211; Path of a file directory</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">ListOfFiles: The list of absolute paths of the sub-directories you want under the Directory</td>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">ListOfFiles: The list of Paths of the sub-directories you want under the Directory</td>
 </tr>
 <tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">List[String]</td>
 </tr>
@@ -337,12 +379,12 @@ Will automatic convert Set content into List.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>Directory</strong> (<em>String</em>) &#8211; absolute path of a file directory</li>
-<li><strong>Extension</strong> (<em>String</em>) &#8211; Extension of the files you want. Better include &#8221;.&#8221; in the Extension</li>
+<li><strong>Directory</strong> (<em>String/List</em>) &#8211; Path/Paths of a file directory</li>
+<li><strong>Extension</strong> (<em>String</em>) &#8211; Extension of the files you want. Better include &#8221;.&#8221; in the Extension. Use &#8221;.&#8221; to list all files.</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">ListOfFiles: The list of absolute paths of the files you want under Directory</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">ListOfFiles: The list of Paths of the files you want under Directory</p>
 </td>
 </tr>
 <tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">List[String]</p>
@@ -360,7 +402,7 @@ Will automatic convert Set content into List.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>Folder</strong> (<em>String</em>) &#8211; absolute path of a directory</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>Folder</strong> (<em>String</em>) &#8211; Path of a directory</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Boolean</td>
 </tr>
@@ -379,21 +421,18 @@ Will automatic convert Set content into List.</p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/IO.txt"
+      <li><a href="_sources/IO.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script><ul>
 <h3>Links:</h3>
@@ -409,11 +448,11 @@ Will automatic convert Set content into List.</p>
       &copy;2016, Wang Hewen.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.1</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.6</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
       
       |
-      <a href="_sources/IO.txt"
+      <a href="_sources/IO.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 
